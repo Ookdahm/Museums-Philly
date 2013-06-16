@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res/com.androidsfuture.museumsphilly"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/city_hall"
+    android:orientation="vertical"
+    tools:context=".Tabs" >
+
+    <TextView
+        android:id="@+id/TitleText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#AA000000"
+        android:gravity="center"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="M u s e u m s    I n    P h i l l y"
+        android:textColor="@color/text_color"
+        android:textSize="20dip" >
+    </TextView>
+
+    <View
+        android:id="@+id/View01"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/TitleText"
+        android:background="@color/text_color" >
+    </View>
+
+    <TableLayout
+        android:id="@+id/TableLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/View01"
+        android:background="@color/opaqueMedium"
+        android:stretchColumns="1" >
+
+        <TableRow
+            android:id="@+id/TableRow01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/opaqueRealLight" >
+
+            <TextView
+                android:id="@+id/ListAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/View01"
+                android:background="@color/opaqueRealLight"
+                android:linksClickable="true"
+                android:paddingBottom="5dip"
+                android:paddingLeft="5dip"
+                android:paddingTop="5dip"
+                android:text="List All"
+                android:textColorLink="@color/color_white"
+                android:textSize="18dip" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/ListFree"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/ListAll"
+                android:background="@color/opaqueRealLight"
+                android:gravity="right"
+                android:paddingRight="37dip"
+                android:paddingTop="5dip"
+                android:text="List Free"
+                android:textColorLink="@color/color_white"
+                android:textSize="18dip" >
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/opaqueRealLight" >
+
+            <TextView
+                android:id="@+id/ListMansions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ListFree"
+                android:background="@color/opaqueRealLight"
+                android:paddingBottom="5dip"
+                android:paddingLeft="5dip"
+                android:paddingTop="3dip"
+                android:text="List Mansions"
+                android:textColorLink="#E9AB17"
+                android:textSize="18dip" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/ListHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/ListMansions"
+                android:background="@color/opaqueRealLight"
+                android:gravity="right"
+                android:paddingRight="8dip"
+                android:paddingTop="3dip"
+                android:text="List History"
+                android:textColorLink="@color/color_white"
+                android:textSize="18dip" >
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/opaqueRealLight" >
+
+            <TextView
+                android:id="@+id/ListArt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ListHistory"
+                android:background="@color/opaqueRealLight"
+                android:paddingBottom="5dip"
+                android:paddingLeft="5dip"
+                android:paddingTop="3dip"
+                android:text="List Art"
+                android:textColorLink="@color/color_white"
+                android:textSize="18dip" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/ListScience"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/ListArt"
+                android:background="@color/opaqueRealLight"
+                android:gravity="right"
+                android:paddingRight="5dip"
+                android:paddingTop="3dip"
+                android:text="List Science"
+                android:textColorLink="@color/color_white"
+                android:textSize="18dip" >
+            </TextView>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/SearchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TableLayout01"
+        android:background="@color/opaqueLight"
+        android:paddingBottom="11dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="3dip"
+        android:text="Search:"
+        android:textColorLink="@color/color_white"
+        android:textSize="18dip"
+        android:visibility="gone" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/SearchBox"
+        android:layout_width="235dip"
+        android:layout_height="35dip"
+        android:layout_below="@id/TableLayout01"
+        android:layout_toRightOf="@id/SearchText"
+        android:textSize="15dip"
+        android:visibility="gone" >
+    </EditText>
+
+    <View
+        android:id="@+id/View02"
+        android:layout_width="wrap_content"
+        android:layout_height="2dip"
+        android:layout_below="@id/SearchBox"
+        android:background="@color/text_color" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/View02" >
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/View02"
+            android:layout_marginBottom="48dip"
+            android:cacheColorHint="#00000000"
+            android:layoutAnimation="@anim/layout_bottom_to_top_slide_70" >
+        </ListView>
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </TextView>
+
+        <com.admob.android.ads.AdView
+            android:id="@+id/ad"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+</RelativeLayout>
